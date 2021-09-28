@@ -1,0 +1,21 @@
+name: cicd with dockerization and Deploy to Beta
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+    types:
+    - closed
+jobs:
+  buildcodeld-beta:
+    runs-on: ubuntu-latest
+    #needs: tag-beta
+    steps:
+    - name: Check out beta-dev branch
+      uses: actions/checkout@v2
+    - name: testing
+      run: |
+          echo "hello cicd test"
+      
