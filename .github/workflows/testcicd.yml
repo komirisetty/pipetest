@@ -1,13 +1,8 @@
 name: cicd with dockerization and Deploy to Beta
 on:
-  #push:
-    #branches:
-      #- main
-  pull_request:
+  push:
     branches:
-      - main
-    types:
-    - closed    
+      - main    
 jobs:
   buildcodeld-beta:
     runs-on: ubuntu-latest
